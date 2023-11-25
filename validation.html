@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <a href="./index.html">Main</a>
+    <form action="">
+      <label for=""
+        >Username
+        <input
+          type="text"
+          name="username"
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username format: John Smith"
+      /></label>
+      <label for=""
+        >Email<input
+          type="email"
+          name="email"
+          autofocus
+          required
+          pattern="^[a-zA-Z0-9]{3,}@[a-zA-Z0-9.]{2,}[.][a-zA-Z0-9]{2,}$"
+          title="Введіть коректний email"
+      /></label>
+      <label for=""
+        >Password<input
+          type="password"
+          name="password"
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9!@#$%^&*]{8,}$"
+          title="Password must contain one capital letter, one specific symbol and one number"
+      /></label>
+      <button type="submit" class="btn">Active button</button>
+      <button type="submit" class="btn" disabled>Disabled button</button>
+      <input type="text" id="active" />
+      <select name="active" id="active" disabled>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <input type="text" id="active" disabled />
+      <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+    </form>
+    <form action="">
+      <p>Яке твоє хобі?</p>
+      <div class="form_field">
+        <input
+          type="checkbox"
+          class="form_input"
+          name="hobby"
+          value="Manga"
+          id="Manga"
+        />
+        <label for="Manga" class="form_label">Manga</label>
+      </div>
+      <div class="form_field">
+        <input
+          type="checkbox"
+          class="form_input"
+          name="hobby"
+          value="Games"
+          id="Games"
+        />
+        <label for="Games" class="form_label">Games</label>
+      </div>
+      <div class="form_field">
+        <input
+          type="checkbox"
+          class="form_input"
+          name="hobby"
+          value="Voleyball"
+          id="Voleyball"
+        />
+        <label for="Voleyball" class="form_label">Voleyball</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <form action="" class="form_example">
+      <p>Валідація чисел</p>
+      <div class="form_field">
+        <input
+          type="number"
+          class="form_input"
+          name="amount-1"
+          value="1"
+          id="amount-1"
+          required
+          min="1"
+          max="10"
+          step="1"
+        />
+        <label for="amount-1" class="form_label"
+          >Скільки піц ви хочете замовити?</label
+        >
+
+        <div class="modal">
+          <p>Value is incorrect</p>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
